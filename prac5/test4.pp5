@@ -1,0 +1,5 @@
+fun connect(ciag : int list) : int list = 
+    let x = [] : int list
+    in ciag :: x
+	
+input c in connect(c)

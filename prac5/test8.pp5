@@ -1,0 +1,12 @@
+fun valueOf (x : int * bool) : bool =
+    let y = (2, true)
+	    in if (fst x) = (fst y)
+		   then true
+		   else false
+		   
+input z in let y = if z > 10
+                      then true
+					  else false
+	       in if valueOf ( (z, y) )
+		         then z
+			     else z + 100

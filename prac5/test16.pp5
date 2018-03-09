@@ -1,0 +1,59 @@
+fun add(x : int) : int list = 
+    let ciag = [1, 2, 3, 4] : int list
+    in x :: ciag
+	
+fun Orwell(result : int) : int =
+    if result = 5
+	   then 1984
+	   else 2017
+	   
+fun equality(horse : int) : bool =
+    let pig = 10000
+	in if horse >= pig
+	      then equality (horse - 1)
+		  else true
+		 
+fun valueOf (x : int * bool) : bool =
+    let y = (2, true)
+	    in if (fst x) = (fst y)
+		   then true
+		   else false
+		   
+fun recursion (x : int) : int = 
+    if x > 0
+       then x + recursion (x - 1)
+	   else x
+	   
+fun fib(n : int * bool) : int =
+    if (snd n)
+	then if fst n <= 1 
+	        then fst n
+            else fib( ((fst n)-1 , true) ) + fib( ((fst n)-2, true) )
+    else 0
+	
+fun loop(x : int) : int =
+    if x < 0
+	   then loop(x)
+	   else x
+	   
+fun makeListSec (x: int) : unit list =
+    [(), (), (), ()] : unit list
+	   
+
+fun length (x : unit list) : int = 
+    match x with [] -> 0 | y :: ys -> 1 + length (ys) 
+	
+fun makeList (x : int) : (int * bool) list =
+    [(3, false), (6, true), (9, false)] : (int * bool) list
+	   
+	   
+fun count (x : (int * bool) list) : int =
+    match x with
+	 | [] -> 0
+	 | y :: ys -> if snd y
+	                 then 1 + count (ys)
+					 else count (ys)
+	
+
+	
+input a b c d e f in loop(a + f) + recursion(b + e) + Orwell(c + d)

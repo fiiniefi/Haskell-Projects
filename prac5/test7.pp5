@@ -1,0 +1,8 @@
+fun IWillNeverUseThatFunctionAgain (x : int) : bool =
+    if x = 5 
+	   then let y = x + 5
+	        in true
+	   else
+	   false
+
+in IWillNeverUseThatFunctionAgain (true)
