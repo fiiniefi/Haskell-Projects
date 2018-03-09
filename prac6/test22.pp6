@@ -1,0 +1,5 @@
+input a b 
+in let fun1 = fn(x : bool) -> if x then 1 else 0
+   in let fun2 = fn(x: unit) -> 10
+      in let fun3 = fn(x: int) -> x + a + b - fun2()
+	     in fun1(a > b) + fun2() + fun3(b - a)

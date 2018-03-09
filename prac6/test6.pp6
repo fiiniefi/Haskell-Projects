@@ -1,0 +1,6 @@
+fun Orwell(result : int) : int =
+    if result = 5
+	   then 1984
+	   else 2017
+	   
+input _rat in Orwell(_rat)

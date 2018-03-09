@@ -1,0 +1,8 @@
+fun idk(n : unit) : int =
+    let x = 1 :: 2 :: [] : int list
+    in let y = (match x with 
+	            | [] -> 0
+	            | x :: xs -> true)
+	   in 10
+	   
+in idk ()

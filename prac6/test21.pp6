@@ -1,0 +1,5 @@
+input a b c
+in let fun1 = fn(x: int) -> a + x
+   in let fun2 = fn(x: int) -> b + x
+      in let fun3 = fn(x: int) -> c + x
+	     in fun1(2) + fun2(1) + fun3(3)

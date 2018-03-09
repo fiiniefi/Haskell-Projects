@@ -1,0 +1,6 @@
+fun add(x : int) : int list = 
+    let ciag = [1, 2, 3, 4] : int list
+    in x :: ciag
+	
+input a in let y = add(a)
+           in a

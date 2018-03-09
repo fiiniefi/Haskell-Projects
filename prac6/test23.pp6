@@ -1,0 +1,6 @@
+input a b
+in let fun1 = fn(x : bool) -> (a, x)
+   in let fun2 = fn(x : int) -> fun1
+      in let fun3 = fn(x : int -> bool -> (int * bool)) -> x(10)
+	     in let function = fun3(fun2)
+		        in fst (function(true))

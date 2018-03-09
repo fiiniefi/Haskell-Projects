@@ -1,0 +1,6 @@
+input a b c
+in if (a + b - c) > 0
+   then let fun1 = fn(x : int) -> x
+        in fun1(a)
+   else
+        fun1(b)

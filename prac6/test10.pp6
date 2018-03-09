@@ -1,0 +1,12 @@
+fun fib(n : int * bool) : int =
+    if (snd n)
+	then if fst n <= 1 
+	        then fst n
+            else fib( ((fst n)-1 , true) ) + fib( ((fst n)-2, true) )
+    else 0
+
+	   
+input n in 
+        if n > 0
+           then fib( (n, true) )
+	       else fib( (n, false) )

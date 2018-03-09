@@ -1,0 +1,7 @@
+fun pierwsza(x: unit) : (int -> int) = 
+    druga
+
+fun druga(x: int) : int = 
+    x * x
+
+input x in pierwsza()(x)

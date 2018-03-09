@@ -1,0 +1,12 @@
+fun makeList (x : int) : (int * bool) list =
+    [(3, false), (6, true), (9, false)] : (int * bool) list
+	   
+	   
+fun count (x : (int * bool) list) : int =
+    match x with
+	 | [] -> 0
+	 | y :: ys -> if snd y
+	                 then 1 + count (ys)
+					 else count (ys)
+	   
+input a in count(makeList(a))

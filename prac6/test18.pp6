@@ -1,0 +1,13 @@
+fun pierwsza(x : (int -> bool) ) : bool =
+    let y = 10
+	in x(y)
+	
+fun druga(x: int) : bool =
+    let y = 15
+	in if x >= y
+	   then true
+	   else false
+	   
+in if pierwsza(druga)
+   then 1
+   else 0

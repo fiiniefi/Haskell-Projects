@@ -1,0 +1,8 @@
+fun makeList (x: int) : unit list =
+    [(), (), (), ()] : unit list
+	   
+
+fun length (x : unit list) : int = 
+    match x with [] -> 0 | y :: ys -> 1 + length (ys) 
+			
+input a in length(makeList(a))

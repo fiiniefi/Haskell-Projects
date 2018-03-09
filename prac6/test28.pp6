@@ -1,0 +1,4 @@
+fun mod2(x : unit) : (int -> int) = 
+    fn(z: int)->z mod 2
+
+input x in mod2() x

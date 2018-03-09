@@ -1,0 +1,10 @@
+fun pierwsza(x : int) : int = 
+    let fun1 = fn(y : bool) -> if y or (x > 10) then 1 else 0
+	in fun1(false)
+	
+fun druga(x : bool) : int =
+    let fun1 = fn(y: bool) -> if x and y then 1 else 0
+	in fun1(true)
+	
+	
+input a in pierwsza(a) + druga((a > 2))

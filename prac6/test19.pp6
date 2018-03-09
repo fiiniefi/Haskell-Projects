@@ -1,0 +1,33 @@
+fun pierwsza (f : (int -> bool -> (bool * int) -> (int * bool) -> (int * int) -> (int list) -> int)) : int = 
+    let x = 21
+	in let a = f(x)
+	   in let b = a(true)
+	      in let c = b( (true, 10) )
+		     in let d = c( (10, true) )
+			    in let e = d( (10, 10) )
+   		           in let f = e([21,2,3] : int list) (*moge bo f to juz int*)
+				      in f
+	
+	
+
+fun druga (x: int) : (bool -> (bool * int) -> (int * bool) -> (int * int) -> (int list) -> int) = 
+    trzecia
+	
+
+fun trzecia (x: bool) : ((bool * int) -> (int * bool) -> (int * int) -> (int list) -> int) = 
+    czwarta
+    
+fun czwarta (x: (bool * int)) : ((int * bool) -> (int * int) -> (int list) -> int) = 
+    piata
+	
+fun piata (x: (int * bool)) : ((int * int) -> (int list) -> int) = 
+    szosta
+
+fun szosta (x: (int * int)) : ((int list) -> int) = 
+    siodma
+	
+fun siodma (y: (int list)) : int = 
+    match y with [] -> 0 | x :: xs -> x
+	
+	
+in pierwsza(druga)

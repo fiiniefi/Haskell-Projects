@@ -1,0 +1,9 @@
+fun equality(horse : int) : bool =
+    let pig = 10000
+	in if horse >= pig
+	      then equality (horse - 1)
+		  else true
+		  
+input boxer in if equality (boxer)
+                  then 1917
+				  else 1990
